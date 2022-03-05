@@ -2,14 +2,14 @@ main {
   padding-top: 64px;
 }
 
- main, div#my-projects {
+ main, div#my-projects, div#recent-posts {
   display: flex;
   flex-direction: column;
   gap: 32px;
   width: 100%;
 }
 
-div#my-projects section#my-projects-header{
+div#my-projects section#my-projects-header, section#recent-posts-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,10 +57,16 @@ li.project a .project-footer .actions .action {
   align-items: center;
   gap: 8px;
 }
-li.project a .project-footer .tech{
+
+li.project a .project-footer .actions .action img {
+  width:18px;
+  height:18px;
+}
+li.project a .project-footer .tech {
   display: flex;
   gap: 12px;
   align-items: center;
+  font-size: 13px;
 }
 li.project a .project-footer .tech div {
   width: 15px;
@@ -77,6 +83,11 @@ li.project a .project-footer .tech div {
 }
 .tech .JavaScript {
   background-color: #EFD81D;
+
+}
+
+.tech .HTML {
+  background-color: #c43902;
 
 }
 
