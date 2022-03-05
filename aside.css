@@ -1,0 +1,157 @@
+:root {
+  --body-bg-color:rgba(18, 18, 20, 1);
+  --text-color: #a6a5bd;
+  --title-color: #cfceeb;
+  --bg-cards: #202024;
+  --secondary: #700ff7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "SF Pro Display", sans-serif;
+}
+body {
+  background: var(--body-bg-color);
+}
+p, a, span {
+  color: var(--text-color);
+  word-break: break-word;
+
+}
+a {
+  text-decoration: none;
+}
+
+h1,h2,h3 {
+  color: var(--title-color);
+}
+.app {
+  display: flex;
+  padding: 48px 128px;
+  gap: 48px;
+}
+.app aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.app aside section {
+  background: var(--bg-cards);
+  border-radius: 4px;
+  padding: 24px;  
+}
+
+section#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section#profile h2 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+section#profile img {
+  border: 1px solid var(--body-bg-color);
+  border-radius: 50%;
+}
+
+section#links ul  {
+  list-style: none;
+  display:flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+section#links ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+section#links ul li:hover a  {
+  color: #9DD6FF;
+}
+section#techs ul {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  list-style: none;
+}
+
+section#techs ul li {
+  padding: 4px;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  text-align: center;
+  color: #9DD6FF;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+section#experiences ul, section#education ul {
+  margin-top: 16px;
+  padding-inline-start: 24px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* Responsive */
+@media only screen and (max-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+  .app {
+    display:flex;
+    flex-direction: column;
+  }
+  .app aside {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 16px;
+  }
+
+  section#profile {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  section#links {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  section#techs {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  section#experiences {
+    grid-area:  3 / 1 / 4 / 2;
+  }
+
+  section#education {
+    grid-area:  3 / 2 / 4 / 3;
+  }
+
+   .app aside section#techs ul {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+@media only screen and (max-width: 700px) {
+  section#links img {
+    width: 18px;
+    height: 18px;
+  }
+  .app {
+    padding: 48px;
+  }
+ 
+}

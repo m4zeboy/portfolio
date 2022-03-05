@@ -1,0 +1,94 @@
+main {
+  padding-top: 64px;
+}
+
+ main, div#my-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+div#my-projects section#my-projects-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+div#my-projects ul.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  list-style: none;
+}
+
+div#my-projects ul li.project a {
+  background: var(--bg-cards);
+  border: 1px solid #3b3b44;
+  border-radius: 4px;
+  padding: 24px; 
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+li.project a .project-header {
+  display:flex;
+  gap: 12px;
+  align-items: center;
+}
+
+li.project a .project-content p{
+  color: #777;
+}
+li.project a .project-footer {
+  display:flex;
+  justify-content: space-between;
+}
+li.project a .project-footer .actions {
+  display:flex;
+  gap: 24px;
+}
+
+li.project a .project-footer .actions .action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+li.project a .project-footer .tech{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+li.project a .project-footer .tech div {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  border: 2px solid #acabb3;
+  /* background-color: #777; */
+
+}
+
+
+.tech .TypeScript {
+  background-color: #2F74C0;
+}
+.tech .JavaScript {
+  background-color: #EFD81D;
+
+}
+
+
+@media only screen and (max-width: 700px) {
+  main {
+    padding-top: 0;
+  }
+  
+  div#my-projects ul.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
